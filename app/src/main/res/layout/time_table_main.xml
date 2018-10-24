@@ -116,15 +116,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="題目"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/roomMon1"
                     android:layout_width="match_parent"
                     android:layout_height="21dp"
-                    android:gravity="center_horizontal"
-                    android:text="教室" />
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -142,15 +140,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="題目"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/roomTue1"
                     android:layout_width="match_parent"
                     android:layout_height="21dp"
-                    android:gravity="center_horizontal"
-                    android:text="教室" />
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -168,15 +164,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="題目"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/roomWed1"
                     android:layout_width="match_parent"
                     android:layout_height="21dp"
-                    android:gravity="center_horizontal"
-                    android:text="教室" />
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -194,15 +188,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="題目"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/roomThu1"
                     android:layout_width="match_parent"
                     android:layout_height="21dp"
-                    android:gravity="center_horizontal"
-                    android:text="教室" />
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -220,15 +212,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="題目"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/roomFri1"
                     android:layout_width="match_parent"
                     android:layout_height="21dp"
-                    android:gravity="center_horizontal"
-                    android:text="教室" />
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -263,15 +253,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomMon2"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -289,15 +277,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomTue2"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -315,15 +301,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomWed2"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -341,15 +325,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomThu2"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -367,15 +349,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomFri2"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -410,15 +390,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomMon3"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -436,15 +414,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomTue3"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -462,15 +438,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomWed3"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -488,15 +462,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomThu3"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -514,15 +486,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomFri3"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -557,15 +527,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomMon4"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -583,15 +551,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomTue4"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -609,15 +575,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomWed4"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -635,15 +599,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomThu4"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -661,15 +623,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomFri4"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -704,15 +664,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomMon5"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -730,15 +688,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomTue5"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -756,15 +712,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomWed5"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -782,15 +736,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomThu5"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -808,15 +760,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomFri5"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -851,15 +801,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomMon6"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -877,15 +825,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomTue6"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -903,15 +849,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomWed6"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -929,15 +873,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomThu6"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 
@@ -955,15 +897,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="題目"
                         android:textSize="18sp"/>
 
                     <TextView
                         android:id="@+id/roomFri6"
                         android:layout_width="match_parent"
                         android:layout_height="21dp"
-                        android:gravity="center_horizontal"
-                        android:text="教室" />
+                        android:gravity="center_horizontal" />
 
                 </LinearLayout>
 

@@ -22,6 +22,7 @@ import org.jetbrains.anko.startActivity
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var realm: Realm
     var mode = 1
+    val timetableid = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,7 +94,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 if (mode == 1) {
                     return true
                 }
-                view.setOnClickListener { startActivity<LectureEditActivity>("LECTURE_ID" to view.id) }
+                view.setOnClickListener { startActivity<LectureEditActivity>("LECTURE_INFO" to intArrayOf(timetableid, view.id)) }
+//                view.setOnClickListener { startActivity<LectureEditActivity>("LECTURE_ID" to view.id) }
                 return false
             }
         })
@@ -172,39 +174,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun setCell(cell: LinearLayout, title: TextView, room: TextView) {
-        val dayAndTime = when (cell.id) {
-            R.id.mon1 -> "月曜日　１限"
-            R.id.mon2 -> "月曜日　２限"
-            R.id.mon3 -> "月曜日　３限"
-            R.id.mon4 -> "月曜日　４限"
-            R.id.mon5 -> "月曜日　５限"
-            R.id.mon6 -> "月曜日　６限"
-            R.id.tue1 -> "火曜日　１限"
-            R.id.tue2 -> "火曜日　２限"
-            R.id.tue3 -> "火曜日　３限"
-            R.id.tue4 -> "火曜日　４限"
-            R.id.tue5 -> "火曜日　５限"
-            R.id.tue6 -> "火曜日　６限"
-            R.id.wed1 -> "水曜日　１限"
-            R.id.wed2 -> "水曜日　２限"
-            R.id.wed3 -> "水曜日　３限"
-            R.id.wed4 -> "水曜日　４限"
-            R.id.wed5 -> "水曜日　５限"
-            R.id.wed6 -> "水曜日　６限"
-            R.id.thu1 -> "木曜日　１限"
-            R.id.thu2 -> "木曜日　２限"
-            R.id.thu3 -> "木曜日　３限"
-            R.id.thu4 -> "木曜日　４限"
-            R.id.thu5 -> "木曜日　５限"
-            R.id.thu6 -> "木曜日　６限"
-            R.id.fri1 -> "金曜日　１限"
-            R.id.fri2 -> "金曜日　２限"
-            R.id.fri3 -> "金曜日　３限"
-            R.id.fri4 -> "金曜日　４限"
-            R.id.fri5 -> "金曜日　５限"
-            R.id.fri6 -> "金曜日　６限"
-            else -> "曜日　　時限"
-        }
+        val dayAndTimeList: Map<Int, String> = mapOf(R.id.mon1 to "月曜日　１限", R.id.mon2 to "月曜日　２限", R.id.mon3 to "月曜日　３限", R.id.mon4 to "月曜日　４限", R.id.mon5 to "月曜日　５限", R.id.mon6 to "月曜日　６限",
+                                                     R.id.tue1 to "火曜日　１限", R.id.tue2 to "火曜日　２限", R.id.tue3 to "火曜日　３限", R.id.tue4 to "火曜日　４限", R.id.tue5 to "火曜日　５限", R.id.tue6 to "火曜日　６限",
+                                                     R.id.wed1 to "水曜日　１限", R.id.wed2 to "水曜日　２限", R.id.wed3 to "水曜日　３限", R.id.wed4 to "水曜日　４限", R.id.wed5 to "水曜日　５限", R.id.wed6 to "水曜日　６限",
+                                                     R.id.thu1 to "木曜日　１限", R.id.thu2 to "木曜日　２限", R.id.thu3 to "木曜日　３限", R.id.thu4 to "木曜日　４限", R.id.thu5 to "木曜日　５限", R.id.thu6 to "木曜日　６限",
+                                                     R.id.fri1 to "金曜日　１限", R.id.fri2 to "金曜日　２限", R.id.fri3 to "金曜日　３限", R.id.fri4 to "金曜日　４限", R.id.fri5 to "金曜日　５限", R.id.fri6 to "金曜日　６限")
+        val dayAndTime = dayAndTimeList.get(cell.id)
         val lecture = realm.where<Lecture>().equalTo("dayAndTime", dayAndTime).findFirst()
         title.text = lecture?.title
         room.text = lecture?.room

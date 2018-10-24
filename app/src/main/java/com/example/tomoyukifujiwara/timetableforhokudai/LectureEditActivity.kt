@@ -32,40 +32,17 @@ class LectureEditActivity : AppCompatActivity() {
         toolbar.setBackgroundResource(R.color.colorAccent)
         setSupportActionBar(toolbar)
 
-        val id = intent.getIntExtra("LECTURE_ID", 0)
-        val dayTime: Int = when (id) {
-            R.id.mon1 -> 1
-            R.id.mon2 -> 2
-            R.id.mon3 -> 3
-            R.id.mon4 -> 4
-            R.id.mon5 -> 5
-            R.id.mon6 -> 6
-            R.id.tue1 -> 7
-            R.id.tue2 -> 8
-            R.id.tue3 -> 9
-            R.id.tue4 -> 10
-            R.id.tue5 -> 11
-            R.id.tue6 -> 12
-            R.id.wed1 -> 13
-            R.id.wed2 -> 14
-            R.id.wed3 -> 15
-            R.id.wed4 -> 16
-            R.id.wed5 -> 17
-            R.id.wed6 -> 18
-            R.id.thu1 -> 19
-            R.id.thu2 -> 20
-            R.id.thu3 -> 21
-            R.id.thu4 -> 22
-            R.id.thu5 -> 23
-            R.id.thu6 -> 24
-            R.id.fri1 -> 25
-            R.id.fri2 -> 26
-            R.id.fri3 -> 27
-            R.id.fri4 -> 28
-            R.id.fri5 -> 29
-            R.id.fri6 -> 30
-            else -> 0
-        }
+//        val id = intent.getIntExtra("LECTURE_ID", 0)
+        val intent = intent.getIntArrayExtra("LECTURE_INFO")
+        val timetableid = intent[0]
+        val id = intent[1]
+
+        val dayTimeList: Map<Int, Int> = mapOf(R.id.mon1 to 1, R.id.mon2 to 2, R.id.mon3 to 3, R.id.mon4 to 4, R.id.mon5 to 5, R.id.mon6 to 6,
+                                               R.id.tue1 to 7, R.id.tue2 to 8, R.id.tue3 to 9, R.id.tue4 to 10, R.id.tue5 to 11, R.id.tue6 to 12,
+                                               R.id.wed1 to 13, R.id.wed2 to 14, R.id.wed3 to 15, R.id.wed4 to 16, R.id.wed5 to 17, R.id.wed6 to 18,
+                                               R.id.thu1 to 19, R.id.thu2 to 20, R.id.thu3 to 21, R.id.thu4 to 22, R.id.thu5 to 23, R.id.thu6 to 24,
+                                               R.id.fri1 to 25, R.id.fri2 to 26, R.id.fri3 to 27, R.id.fri4 to 28, R.id.fri5 to 29, R.id.fri6 to 30)
+        val dayTime = dayTimeList.get(id)!!.toInt()
 
         var check: Boolean = true
         var dayAndTime: String = ""
