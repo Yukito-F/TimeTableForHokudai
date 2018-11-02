@@ -22,7 +22,7 @@ import org.jetbrains.anko.startActivity
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var realm: Realm
     var mode = 1
-    val timetableid = 0
+    var timetableid = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,43 +33,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
 
         realm = Realm.getDefaultInstance()
-        realmSet("first")
-        realmSet("second")
-        realmSet("third")
-        realmSet("fourth")
-        realmSet("fifth")
-        realmSet("sixth")
+        val arrayOfString: Array<String> = arrayOf("first","second","third","fourth","fifth","sixth")
+        for (time in arrayOfString) realmSet(time)
 
-        clickCell(mon1)
-        clickCell(mon2)
-        clickCell(mon3)
-        clickCell(mon4)
-        clickCell(mon5)
-        clickCell(mon6)
-        clickCell(tue1)
-        clickCell(tue2)
-        clickCell(tue3)
-        clickCell(tue4)
-        clickCell(tue5)
-        clickCell(tue6)
-        clickCell(wed1)
-        clickCell(wed2)
-        clickCell(wed3)
-        clickCell(wed4)
-        clickCell(wed5)
-        clickCell(wed6)
-        clickCell(thu1)
-        clickCell(thu2)
-        clickCell(thu3)
-        clickCell(thu4)
-        clickCell(thu5)
-        clickCell(thu6)
-        clickCell(fri1)
-        clickCell(fri2)
-        clickCell(fri3)
-        clickCell(fri4)
-        clickCell(fri5)
-        clickCell(fri6)
+        val arrayOfView: Array<View> = arrayOf(mon1,mon2,mon3,mon4,mon5,mon6,tue1,tue2,tue3,tue4,tue5,tue6,wed1,wed2,wed3,wed4,wed5,wed6,thu1,thu2,thu3,thu4,thu5,thu6,fri1,fri2,fri3,fri4,fri5,fri6)
+        for (view in arrayOfView) clickCell(view)
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -95,7 +63,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     return true
                 }
                 view.setOnClickListener { startActivity<LectureEditActivity>("LECTURE_INFO" to intArrayOf(timetableid, view.id)) }
-//                view.setOnClickListener { startActivity<LectureEditActivity>("LECTURE_ID" to view.id) }
                 return false
             }
         })
@@ -216,11 +183,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 if (mode == -1) {
                     toolbar.subtitle = "編集中"
                     toolbar.setBackgroundResource(R.color.colorAccent)
-//                    window.setStatusBarColor(R.color.colorAccentDark)
                 } else {
                     toolbar.subtitle = ""
                     toolbar.setBackgroundResource(R.color.colorPrimary)
-//                    window.setStatusBarColor(R.color.colorPrimaryDark)
                 }
                 return true
             }
@@ -235,23 +200,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
-                // Handle the camera action
+            R.id.listView -> {
+//                val timetable = realm.where<Timetable>().findAll()
+//
+//                listview.adapter = TimetableAdapter(timetable)
+//                listView.setOnItemClickListener { parent, view, position, id ->
+//                    val timetable = parent.getItemAtPosition(position) as Timetable
+//                    timetableid = timetable.timetableid}
             }
-            R.id.nav_gallery -> {
-
+            R.id.set -> {
             }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_manage -> {
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
+            R.id.information -> {
             }
         }
 
