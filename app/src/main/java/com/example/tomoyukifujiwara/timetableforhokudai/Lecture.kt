@@ -6,7 +6,7 @@ import io.realm.annotations.PrimaryKey
 open class Lecture: RealmObject() {
     @PrimaryKey
     var dayAndTime: String = ""
-    var timetable: Int = 0
+    var timetable: Int = 0//dayandtimeにid代わりの数字を入れて対応
     var title: String = ""
     var room: String = ""
     var teacher: String = ""

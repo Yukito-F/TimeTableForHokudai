@@ -6,85 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
     <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-            <LinearLayout
-                android:id="@+id/days"
+        <LinearLayout
+            android:id="@+id/days"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/space"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:background="@drawable/default_cell_color"
+                android:text="　" />
+
+            <TextView
+                android:id="@+id/mon"
                 android:layout_width="match_parent"
                 android:layout_height="21dp"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="月" />
 
-                <TextView
-                    android:id="@+id/space"
-                    android:layout_width="21dp"
-                    android:layout_height="21dp"
-                    android:background="@drawable/default_cell_color"
-                    android:text="　" />
+            <TextView
+                android:id="@+id/tue"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:layout_weight="1"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="火" />
 
-                <TextView
-                    android:id="@+id/mon"
-                    android:layout_width="match_parent"
-                    android:layout_height="21dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="月" />
+            <TextView
+                android:id="@+id/wed"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:layout_weight="1"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="水" />
 
-                <TextView
-                    android:id="@+id/tue"
-                    android:layout_width="match_parent"
-                    android:layout_height="21dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="火" />
+            <TextView
+                android:id="@+id/thu"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:layout_weight="1"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="木" />
 
-                <TextView
-                    android:id="@+id/wed"
-                    android:layout_width="match_parent"
-                    android:layout_height="21dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="水" />
+            <TextView
+                android:id="@+id/fri"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:layout_weight="1"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="金" />
 
-                <TextView
-                    android:id="@+id/thu"
-                    android:layout_width="match_parent"
-                    android:layout_height="21dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="木" />
-
-                <TextView
-                    android:id="@+id/fri"
-                    android:layout_width="match_parent"
-                    android:layout_height="21dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="金" />
-
-            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/first"
@@ -224,691 +239,691 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/second"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="２" />
+
             <LinearLayout
-                android:id="@+id/second"
+                android:id="@+id/mon2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/two"
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="２" />
-
-                <LinearLayout
-                    android:id="@+id/mon2"
+                    android:id="@+id/titleMon2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/titleMon2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomMon2"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tue2"
+                <TextView
+                    android:id="@+id/roomMon2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleTue2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomTue2"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/wed2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleWed2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomWed2"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/thu2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleThu2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomThu2"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/fri2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleFri2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomFri2"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/third"
+                android:id="@+id/tue2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/three"
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="３" />
-
-                <LinearLayout
-                    android:id="@+id/mon3"
+                    android:id="@+id/titleTue2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/titleMon3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomMon3"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tue3"
+                <TextView
+                    android:id="@+id/roomTue2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleTue3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomTue3"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/wed3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleWed3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomWed3"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/thu3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleThu3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomThu3"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/fri3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleFri3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomFri3"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/fourth"
+                android:id="@+id/wed2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/four"
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="４" />
-
-                <LinearLayout
-                    android:id="@+id/mon4"
+                    android:id="@+id/titleWed2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/titleMon4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomMon4"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tue4"
+                <TextView
+                    android:id="@+id/roomWed2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleTue4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomTue4"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/wed4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleWed4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomWed4"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/thu4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleThu4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomThu4"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/fri4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleFri4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomFri4"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/fifth"
+                android:id="@+id/thu2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/five"
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="５" />
-
-                <LinearLayout
-                    android:id="@+id/mon5"
+                    android:id="@+id/titleThu2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/titleMon5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomMon5"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tue5"
+                <TextView
+                    android:id="@+id/roomThu2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleTue5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomTue5"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/wed5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleWed5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomWed5"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/thu5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleThu5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomThu5"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/fri5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleFri5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomFri5"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/sixth"
+                android:id="@+id/fri2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/six"
-                    android:layout_width="21dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/default_cell_color"
-                    android:gravity="center"
-                    android:text="６" />
-
-                <LinearLayout
-                    android:id="@+id/mon6"
+                    android:id="@+id/titleFri2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/titleMon6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomMon6"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tue6"
+                <TextView
+                    android:id="@+id/roomFri2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleTue6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomTue6"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/wed6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleWed6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomWed6"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/thu6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleThu6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomThu6"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/fri6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_color"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleFri6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/roomFri6"
-                        android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:gravity="center_horizontal" />
-
-                </LinearLayout>
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/third"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/three"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="３" />
+
+            <LinearLayout
+                android:id="@+id/mon3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleMon3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomMon3"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tue3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTue3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomTue3"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wed3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleWed3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomWed3"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thu3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleThu3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomThu3"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fri3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleFri3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomFri3"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fourth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/four"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="４" />
+
+            <LinearLayout
+                android:id="@+id/mon4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleMon4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomMon4"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tue4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTue4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomTue4"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wed4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleWed4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomWed4"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thu4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleThu4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomThu4"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fri4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleFri4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomFri4"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fifth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/five"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="５" />
+
+            <LinearLayout
+                android:id="@+id/mon5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleMon5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomMon5"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tue5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTue5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomTue5"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wed5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleWed5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomWed5"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thu5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleThu5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomThu5"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fri5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleFri5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomFri5"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sixth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/six"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_cell_color"
+                android:gravity="center"
+                android:text="６" />
+
+            <LinearLayout
+                android:id="@+id/mon6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleMon6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomMon6"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tue6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTue6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomTue6"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wed6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleWed6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomWed6"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thu6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleThu6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomThu6"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fri6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleFri6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/roomFri6"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

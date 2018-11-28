@@ -6,23 +6,23 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.view.Menu
-import android.view.MenuItem
-import android.view.MotionEvent
-import android.view.View
+import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
 import io.realm.Realm
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.time_table_main.*
 import org.jetbrains.anko.startActivity
+import android.widget.ArrayAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var realm: Realm
     var mode = 1
     var timetableid = 0
+    private var mTitle: CharSequence? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,12 +39,36 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val arrayOfView: Array<View> = arrayOf(mon1,mon2,mon3,mon4,mon5,mon6,tue1,tue2,tue3,tue4,tue5,tue6,wed1,wed2,wed3,wed4,wed5,wed6,thu1,thu2,thu3,thu4,thu5,thu6,fri1,fri2,fri3,fri4,fri5,fri6)
         for (view in arrayOfView) clickCell(view)
 
-        val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        val toggle = ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
-        nav_view.setNavigationItemSelectedListener(this)
+//        val timetables = realm.where<Timetable>().findAll()
+//        left_drawer.adapter = TimetableAdapter(timetables)
+//
+//        left_drawer.setOnItemClickListener { parent, view, position, id ->
+//            val timetable = parent.getItemAtPosition(position) as Timetable
+//            timetableid = timetable.id
+//            onResume()
+//            drawer_layout.closeDrawer(GravityCompat.START)
+//        }
+
+        val items = Array(20, { i -> "Title-$i" })
+        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items)
+        timetableList.adapter = adapter
+        timetableList.setOnItemClickListener { parent, view, position, id ->
+            timetableid = position
+            onResume()
+            drawer_layout.closeDrawer(GravityCompat.START)
+        }
+
+        navSetting.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_settings_black_24dp, 0, 0, 0);
+        navEdit.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_edit_black_24dp, 0, 0, 0);
+    }
+
+    override fun setTitle(title: CharSequence) {
+        mTitle = title
+        actionBar!!.setTitle(mTitle)
     }
 
     private fun realmSet(time: String) {
@@ -70,6 +94,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onResume() {
         super.onResume()
+        test.text = timetableid.toString()
         if (checker("first")) {
                 first.visibility = View.VISIBLE
                 setCell(mon1, titleMon1, roomMon1)
@@ -200,23 +225,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.listView -> {
-//                val timetable = realm.where<Timetable>().findAll()
-//
-//                listview.adapter = TimetableAdapter(timetable)
-//                listView.setOnItemClickListener { parent, view, position, id ->
-//                    val timetable = parent.getItemAtPosition(position) as Timetable
-//                    timetableid = timetable.timetableid}
-            }
-            R.id.set -> {
-            }
-            R.id.information -> {
-            }
+//            R.id.set -> {
+//            }
+//            R.id.information -> {
+//            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+
+//    private fun addMenuItemInNavMenuDrawer() {
+//        val navView = findViewById<View>(R.id.nav_view) as NavigationView
+//
+//        val menu = navView.menu
+//        val submenu = menu.addSubMenu("Timetable List")
+//
+//        submenu.add("Super Item1")
+//        submenu.add("Super Item2")
+//        submenu.add("Super Item3")
+
+//        navView.invalidate()
+//    }
 
     override fun onDestroy() {
         super.onDestroy()
