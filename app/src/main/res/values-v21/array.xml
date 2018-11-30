@@ -1,38 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="lecture_list_six">
-        <item>曜日　　時限</item>
-        <item>月曜日　１限</item>
-        <item>月曜日　２限</item>
-        <item>月曜日　３限</item>
-        <item>月曜日　４限</item>
-        <item>月曜日　５限</item>
-        <item>月曜日　６限</item>
-        <item>火曜日　１限</item>
-        <item>火曜日　２限</item>
-        <item>火曜日　３限</item>
-        <item>火曜日　４限</item>
-        <item>火曜日　５限</item>
-        <item>火曜日　６限</item>
-        <item>水曜日　１限</item>
-        <item>水曜日　２限</item>
-        <item>水曜日　３限</item>
-        <item>水曜日　４限</item>
-        <item>水曜日　５限</item>
-        <item>水曜日　６限</item>
-        <item>木曜日　１限</item>
-        <item>木曜日　２限</item>
-        <item>木曜日　３限</item>
-        <item>木曜日　４限</item>
-        <item>木曜日　５限</item>
-        <item>木曜日　６限</item>
-        <item>金曜日　１限</item>
-        <item>金曜日　２限</item>
-        <item>金曜日　３限</item>
-        <item>金曜日　４限</item>
-        <item>金曜日　５限</item>
-        <item>金曜日　６限</item>
+    <string-array name="day_list">
+        <item>曜日</item>
+        <item>月曜日</item>
+        <item>火曜日</item>
+        <item>水曜日</item>
+        <item>木曜日</item>
+        <item>金曜日</item>
     </string-array>
+    <string-array name="time_list">
+        <item>時限</item>
+        <item>１限</item>
+        <item>２限</item>
+        <item>３限</item>
+        <item>４限</item>
+        <item>５限</item>
+        <item>６限</item>
+    </string-array>
+
     <string-array name="color">
         <item>無色</item>
         <item>青</item>

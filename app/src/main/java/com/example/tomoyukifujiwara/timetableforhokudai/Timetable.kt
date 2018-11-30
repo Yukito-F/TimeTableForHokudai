@@ -5,6 +5,7 @@ import io.realm.annotations.PrimaryKey
 
 open class Timetable: RealmObject() {
     @PrimaryKey
-    var id: Int = 0
+    var listId: Int = 0
     var title: String = ""
+    var timetableId: Int = 0
 }

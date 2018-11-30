@@ -166,13 +166,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun setCell(cell: LinearLayout, title: TextView, room: TextView) {
-        val dayAndTimeList: Map<Int, String> = mapOf(R.id.mon1 to "月曜日　１限", R.id.mon2 to "月曜日　２限", R.id.mon3 to "月曜日　３限", R.id.mon4 to "月曜日　４限", R.id.mon5 to "月曜日　５限", R.id.mon6 to "月曜日　６限",
-                                                     R.id.tue1 to "火曜日　１限", R.id.tue2 to "火曜日　２限", R.id.tue3 to "火曜日　３限", R.id.tue4 to "火曜日　４限", R.id.tue5 to "火曜日　５限", R.id.tue6 to "火曜日　６限",
-                                                     R.id.wed1 to "水曜日　１限", R.id.wed2 to "水曜日　２限", R.id.wed3 to "水曜日　３限", R.id.wed4 to "水曜日　４限", R.id.wed5 to "水曜日　５限", R.id.wed6 to "水曜日　６限",
-                                                     R.id.thu1 to "木曜日　１限", R.id.thu2 to "木曜日　２限", R.id.thu3 to "木曜日　３限", R.id.thu4 to "木曜日　４限", R.id.thu5 to "木曜日　５限", R.id.thu6 to "木曜日　６限",
-                                                     R.id.fri1 to "金曜日　１限", R.id.fri2 to "金曜日　２限", R.id.fri3 to "金曜日　３限", R.id.fri4 to "金曜日　４限", R.id.fri5 to "金曜日　５限", R.id.fri6 to "金曜日　６限")
-        val dayAndTime = dayAndTimeList.get(cell.id)
-        val lecture = realm.where<Lecture>().equalTo("dayAndTime", dayAndTime).findFirst()
+        val dayTimeList: Map<Int, Int> = mapOf(R.id.mon1 to 11, R.id.mon2 to 12, R.id.mon3 to 13, R.id.mon4 to 14, R.id.mon5 to 15, R.id.mon6 to 16,
+                                               R.id.tue1 to 21, R.id.tue2 to 22, R.id.tue3 to 23, R.id.tue4 to 24, R.id.tue5 to 25, R.id.tue6 to 26,
+                                               R.id.wed1 to 31, R.id.wed2 to 32, R.id.wed3 to 33, R.id.wed4 to 34, R.id.wed5 to 35, R.id.wed6 to 36,
+                                               R.id.thu1 to 41, R.id.thu2 to 42, R.id.thu3 to 43, R.id.thu4 to 44, R.id.thu5 to 45, R.id.thu6 to 46,
+                                               R.id.fri1 to 51, R.id.fri2 to 52, R.id.fri3 to 53, R.id.fri4 to 54, R.id.fri5 to 55, R.id.fri6 to 55)
+        val dayTime = dayTimeList.getOrElse(cell.id, {11})
+        val lecture = realm.where<Lecture>().equalTo("dayAndTime", timetableid*100 + dayTime).findFirst()
         title.text = lecture?.title
         room.text = lecture?.room
         if (lecture?.dayAndTime != null) {
